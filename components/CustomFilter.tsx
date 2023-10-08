@@ -8,8 +8,14 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CustomFilterProps } from '@/types';
 
 const CustomFilter = ({ title, options }: CustomFilterProps) => {
-
+  const router = useRouter()
   const [selected, setSelected] = useState(options[0]);
+
+  const handleUpdateParams = (type: string, value: string) => {
+    const newPathName = '';
+
+    router.push(newPathName)
+  }
 
   return (
     <div className="w-fit">
@@ -45,7 +51,8 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
                     py-2 px-4 ${active ? 'bg-primary-blue text-white' : 'text-gray-900'}`}
                   >
                     {({ selected }) => (
-                      <span>
+                      <span className={`block truncate  
+                      ${selected ? 'font-medium' : 'font-normal' } `}>
                         {option.title}
                       </span>
                     )}

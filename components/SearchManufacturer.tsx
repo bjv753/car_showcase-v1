@@ -5,9 +5,9 @@ import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 
 import { manufacturers } from "@/constants";
-import { SearchManufacturerProps } from "@/types";
+import { SearchManuFacturerProps } from "@/types";
 
-const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacturerProps) => {
+const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManuFacturerProps) => {
   const [query, setQuery] = useState("");
 
   const filteredManufacturers =
@@ -37,7 +37,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
 
           {/* Input field for searching */}
           <Combobox.Input
-            className='search-manufacturer__input ml-2'
+            className='search-manufacturer__input'
             displayValue={(item: string) => item}
             onChange={(event) => setQuery(event.target.value)} // Update the search query when the input changes
             placeholder='Volkswagen...'

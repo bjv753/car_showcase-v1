@@ -11,7 +11,7 @@ export interface CustomButtonProps {
       isDisabled?: boolean;
 }
 
-export interface SearchManufacturerProps {
+export interface SearchManuFacturerProps {
       manufacturer: string;
       setManufacturer: (manufacturer: string) => void;
 }
@@ -38,6 +38,10 @@ export interface FilterProps {
       limit: number;
       model: string;
 }
+
+export interface HomeProps {
+      searchParams: FilterProps;
+    }
 
 export interface OptionProps {
       title: string;
